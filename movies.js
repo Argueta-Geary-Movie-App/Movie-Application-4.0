@@ -2,6 +2,7 @@
 
 const glitchURL = 'https://aluminum-coral-comic.glitch.me/movies';
 
+//FETCHING THE GLITCH DATA
 const fetchGLITCH = async () => {
     try {
         //DEFINE THE RESPONSE TO GET THE DATA
@@ -13,3 +14,19 @@ const fetchGLITCH = async () => {
     }
 }
 
+
+const movieContainer = document.querySelector('#movies');
+
+const displayMovies = async () => {
+    movieContainer.setHTML(''); //GRABS THE DOM #movies AND SETS TO AN EMPTY STRING
+
+    let data = await fetchGLITCH(); //GRABS THE DATA
+    console.log(data);
+
+
+    //movie = index of the data
+    for(let movie of data) {
+
+    }
+
+}
