@@ -25,7 +25,6 @@ const displayMovies = async () => {
     let data = await fetchGLITCH(); //GRABS THE DATA
     // console.log(data);
 
-
     //movie = index of the data
     for(let movie of data) {
 
@@ -84,6 +83,12 @@ const appMoviesRefresh = async () => {
     await movieForm.reset;
 }
 
-const deleteMovies = async () => {
-
+async function deleteMovies(id) {
+    try {
+        await axios.delete(`${glitchURL}/${id}`)
+        console.log('Hodor');
+        displayMovies();
+    } catch(e) {
+        console.log("Delete Movie Error", e);
+    }
 }
