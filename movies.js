@@ -83,3 +83,7 @@ const appMoviesRefresh = async () => {
     await displayMovies();
     await movieForm.reset;
 }
+
+const deleteMovies = async () => {
+
+}
