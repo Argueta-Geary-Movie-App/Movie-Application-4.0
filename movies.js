@@ -55,5 +55,12 @@ const displayMovies = async () => {
     }
 
 }
-
 displayMovies();
+
+/* POST */
+const postNewMovie = () => {
+    const movieTitle = document.querySelector('#movieTitle').value;
+    const movieDirector = document.querySelector('#movieDirector').value;
+    const movieRating = document.querySelector('#movieRating').value;
+    console.log(movieDirector);
+}
