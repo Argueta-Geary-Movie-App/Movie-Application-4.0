@@ -59,8 +59,22 @@ displayMovies();
 
 /* POST */
 const postNewMovie = () => {
+    try {
+
+
     const movieTitle = document.querySelector('#movieTitle').value;
     const movieDirector = document.querySelector('#movieDirector').value;
     const movieRating = document.querySelector('#movieRating').value;
-    console.log(movieDirector);
+    const res = axios.post(glitchURL,
+        {
+            title: `${movieTitle}`,
+            director: `${movieDirector}`,
+            rating: `${movieRating}`
+        });
+        console.log("Hodor");
+    return res;
+
+    } catch (e) {
+        console.log('addMovie Broken', e);
+    }
 }
