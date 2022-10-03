@@ -33,11 +33,9 @@ const displayMovies = async () => {
         let card = document.createElement('div');
         card.setAttribute("class", "card");
         card.setHTML( `<!-- Movie Card -->
-<!--                    <div id="favCard" class="card" style="margin: 4rem;">-->
                         <div class="fav-card-content">
                         <h5 class="fav-title">${movie.title}</h5>
                             <div class="fav-body">
-                                <img class="fav-poster" src="${movie.poster}" alt="Movie Title" style="width: 250px; height: 30vh;">
                                 <p class="fav-director">Director: ${movie.director}</p>
                                 <p class="fav-rated">Rated: ${movie.rated}</p>
                                 <p class="fav-genre">Genre: ${movie.genre}</p>
