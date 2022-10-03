@@ -76,3 +76,12 @@ const postNewMovie = () => {
         console.log('addMovie Broken', e);
     }
 }
+
+const movieForm = document.querySelector('#addMovieForm');
+
+/* Refresh Page with New Movie Added */
+const appMoviesRefresh = async () => {
+    await postNewMovie();
+    await displayMovies();
+    await movieForm.reset;
+}
